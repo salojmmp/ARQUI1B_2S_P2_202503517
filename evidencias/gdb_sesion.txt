@@ -1,0 +1,948 @@
+Script iniciado en 2026-10-20 22:48:58-06:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="138" LINES="38"]
+]666;vte.shell.postexec=0\]7;file://salmonnn-HP-Laptop-15-ef2xxx/home/salmonnn/minishell_arm64\]0;salmonnn@salmonnn-HP-Laptop-15-ef2xxx:~/minishell_arm64\]666;vte.shell.precmd!\[?2004h]0;salmonnn@salmonnn-HP-Laptop-15-ef2xxx: ~/minishell_arm64[01;32msalmonnn@salmonnn-HP-Laptop-15-ef2xxx[00m:[01;34m~/minishell_arm64[00m$ [7mgdb-multiarch ./minishell[27mgdb-multiarch ./minishell
+[?2004l]133;C\]666;vte.shell.preexec!\[35;49;1;23;24;27mGNU gdb (Ubuntu 17.1-2ubuntu1) 17.1[m
+Copyright (C) 2025 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <[32;49;22;23;24;27mhttp://gnu.org/licenses/gpl.html[m>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "[39;49;1;23;24;27mshow copying[m" and "[39;49;1;23;24;27mshow warranty[m" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "[39;49;1;23;24;27mshow configuration[m" for configuration details.
+For bug reporting instructions, please see:
+[32;49;22;23;24;27m<https://www.gnu.org/software/gdb/bugs/>[m.
+Find the GDB manual and other documentation resources online at:
+    <[32;49;22;23;24;27mhttp://www.gnu.org/software/gdb/documentation/[m>.
+
+For help, type "[39;49;1;23;24;27mhelp[m".
+Type "[39;49;1;23;24;27mapropos word[m" to search for commands related to "word"...
+Reading symbols from [32;49;22;23;24;27m./minishell[m...
+[?2004h(gdb) [7mset architecture aarch64[27m[C[C[C[C[C[Cset architecture aarch64
+[?2004lThe target architecture is set to "aarch64".
+[?2004h(gdb) [7mset pagination off[27m[C[C[C[C[C[Cset pagination off
+[?2004l[?2004h(gdb) [7mset debuginfod enabled off[27m[C[C[C[C[C[Cset debuginfod enabled off
+[?2004l[?2004h(gdb) [7mtarget remote :1234[27m[C[C[C[C[C[Ctarget remote :1234
+[?2004lRemote debugging using :1234
+[33;49;22;23;24;27m_start[m () at [32;49;22;23;24;27msrc/main.s[m:[39;49;2;23;24;27m39[m
+[39;49;2;23;24;27m39[m	    [34;49;1;23;24;27mmov[m x[35;49;22;23;24;27m0[m[31;49;22;23;24;27m,[m #[35;49;22;23;24;27m1[m
+[?2004h(gdb) [7mbreak comparar_cadenas[27m[C[C[C[C[C[Cbreak comparar_cadenas
+[?2004lPunto de interrupción 1 at [34;49;22;23;24;27m0x40021c[m: file [32;49;22;23;24;27msrc/main.s[m, line [39;49;2;23;24;27m196[m.
+[?2004h(gdb) [7mbreak comando_echo[27m[C[C[C[C[C[Cbreak comando_echo
+[?2004lPunto de interrupción 2 at [34;49;22;23;24;27m0x400298[m: file [32;49;22;23;24;27msrc/main.s[m, line [39;49;2;23;24;27m262[m.
+[?2004h(gdb) [7mbreak ejecutar_externo[27m[C[C[C[C[C[Cbreak ejecutar_externo
+[?2004lPunto de interrupción 3 at [34;49;22;23;24;27m0x40031c[m: file [32;49;22;23;24;27msrc/main.s[m, line [39;49;2;23;24;27m319[m.
+[?2004h(gdb) [7mcontinue[27m[C[C[C[C[C[Ccontinue
+[?2004lContinuando.
+
+Breakpoint 1, [33;49;22;23;24;27mcomparar_cadenas[m () at [32;49;22;23;24;27msrc/main.s[m:[39;49;2;23;24;27m196[m
+[39;49;2;23;24;27m196[m	    stp x[35;49;22;23;24;27m29[m[31;49;22;23;24;27m,[m x[35;49;22;23;24;27m30[m[31;49;22;23;24;27m,[m [31;49;22;23;24;27m[[m[32;49;22;23;24;27msp[m[31;49;22;23;24;27m,[m #[31;49;22;23;24;27m-[m[35;49;22;23;24;27m16[m[31;49;22;23;24;27m]![m
+[?2004h[?2004l[?2004h(gdb) [7minfo registers[27m[C[C[C[C[C[Cinfo registers
+[?2004lx0             0x410571            4261233
+x1             0x41056c            4261228
+x2             0x9                 9
+x3             0x61                97
+x4             0x0                 0
+x5             0x0                 0
+x6             0x0                 0
+x7             0x0                 0
+x8             0x3f                63
+x9             0x0                 0
+x10            0x0                 0
+x11            0x0                 0
+x12            0x0                 0
+x13            0x0                 0
+x14            0x0                 0
+x15            0x0                 0
+x16            0x0                 0
+x17            0x0                 0
+x18            0x0                 0
+x19            0x9                 9
+x20            0x9                 9
+x21            0x410571            4261233
+x22            0x0                 0
+x23            0x0                 0
+x24            0x2                 2
+x25            0x410671            4261489
+x26            0x0                 0
+x27            0x0                 0
+x28            0x0                 0
+x29            0x0                 0
+x30            0x4001b8            4194744
+sp             0x775ebb5fde60      0x775ebb5fde60
+pc             0x40021c            0x40021c <comparar_cadenas>
+cpsr           0x20000000          [ EL=0 BTYPE=0 C ]
+fpsr           0x0                 0
+fpcr           0x0                 0
+vg             0x8                 8
+svg            0x0                 0
+svcr           0x0                 0
+tpidr          0x0                 0x0
+tpidr2         0x0                 0x0
+tag_ctl        0x0                 0
+ID_MMFR5       0x2                 2
+RES_0_C0_C3_7  0x0                 0
+ID_AA64PFR0_EL1 0x1000100110011    281479272792081
+DBGVCR32_EL2   0x0                 0
+MAIR_EL3       0x0                 0
+ID_AA64PFR1_EL1 0x2000321          33555233
+VSESR_EL2      0x0                 0
+ID_AA64PFR2_EL1 0x0                0
+ID_AA64PFR3_EL1_RESERVED 0x0       0
+SCTLR_EL1      0x9000040accd5e838  -8070446087815174088
+PIR_EL3        0x0                 0
+ID_AA64ZFR0_EL1 0x110110101210022  76579889676877858
+ACTLR_EL1      0x0                 0
+SCXTNUM_EL3    0x0                 0
+GCSPR_EL0      0x0                 0
+DACR32_EL2     0x0                 0
+ID_AA64SMFR0_EL1 0x82f15cff00000000 -9011319129105235968
+CPACR_EL1      0x3330000           53673984
+ID_AA64PFR6_EL1_RESERVED 0x0       0
+SCTLR2_EL1     0x0                 0
+FPEXC32_EL2    0x40000000          1073741824
+TFSR_EL1       0x0                 0
+ID_AA64PFR7_EL1_RESERVED 0x0       0
+TFSRE0_EL1     0x0                 0
+ID_AA64DFR0_EL1 0x6                6
+RGSR_EL1       0x0                 0
+ID_AA64DFR1_EL1 0x0                0
+GCR_EL1        0x1ffff             131071
+AMAIR2_EL3     0x0                 0
+ID_AA64DFR2_EL1_RESERVED 0x0       0
+GCSCR_EL2      0x0                 0
+GCSPR_EL2      0x0                 0
+ID_AA64DFR3_EL1_RESERVED 0x0       0
+ID_AA64AFR0_EL1 0x0                0
+ID_AA64AFR1_EL1 0x0                0
+ID_AA64AFR2_EL1_RESERVED 0x0       0
+CNTFRQ_EL0     0x3b9aca00          1000000000
+OSDTRRX_EL1    0x0                 0
+ID_AA64AFR3_EL1_RESERVED 0x0       0
+SPSR_EL1       0x0                 0
+ID_AA64ISAR0_EL1 0x1021111110312120 1162228943822070048
+DBGBVR0_EL1    0x0                 0
+ELR_EL1        0x0                 0
+ID_AA64ISAR1_EL1 0x11201100211002  4820331992780802
+HDFGRTR_EL2    0x0                 0
+HDFGWTR_EL2    0x0                 0
+DBGBCR0_EL1    0x0                 0
+PMEVTYPER0_EL0 0x0                 0
+ID_AA64ISAR2_EL1 0x10000000110012  4503599628484626
+DBGWVR0_EL1    0x0                 0
+VBAR_EL1       0x0                 0
+ID_AA64ISAR3_EL1_RESERVED 0x0      0
+ZCR_EL1        0x3                 3
+DBGWCR0_EL1    0x0                 0
+RVBAR_EL1      0x0                 0
+ID_AA64ISAR4_EL1_RESERVED 0x0      0
+PMEVTYPER2_EL0 0x0                 0
+RMR_EL1        0x1                 1
+ID_AA64ISAR5_EL1_RESERVED 0x0      0
+PMEVTYPER1_EL0 0x0                 0
+ID_AA64ISAR6_EL1_RESERVED 0x0      0
+GCSCR_EL3      0x0                 0
+PMEVTYPER4_EL0 0x0                 0
+PMEVTYPER5_EL0 0x0                 0
+GCSPR_EL3      0x0                 0
+ID_AA64ISAR7_EL1_RESERVED 0x0      0
+SMPRI_EL1      0x0                 0
+SP_EL0         0x0                 0
+ID_AA64MMFR0_EL1 0x20000000ff000000 2305843013491884032
+PMEVTYPER3_EL0 0x0                 0
+DBGBVR1_EL1    0x0                 0
+ID_AA64MMFR1_EL1 0x100000000000    17592186044416
+SMCR_EL1       0x80000001          2147483649
+DBGBCR1_EL1    0x0                 0
+ID_AA64MMFR2_EL1 0x100000000       4294967296
+PMINTENSET_EL1 0x0                 0
+DBGWVR1_EL1    0x0                 0
+ID_AA64MMFR3_EL1 0x0               0
+PMCR_EL0       0x41013000          1090596864
+DBGWCR1_EL1    0x0                 0
+ID_AA64MMFR4_EL1_RESERVED 0x0      0
+PMCNTENSET_EL0 0x0                 0
+ACTLR_EL2      0x0                 0
+PMINTENCLR_EL1 0x0                 0
+MDCCINT_EL1    0x0                 0
+ID_AA64MMFR5_EL1_RESERVED 0x0      0
+PMCNTENCLR_EL0 0x0                 0
+DISR_EL1       0x0                 0
+ID_AA64MMFR6_EL1_RESERVED 0x0      0
+SCTLR2_EL2     0x0                 0
+TFSR_EL2       0x0                 0
+MDSCR_EL1      0x1000              4096
+ID_AA64MMFR7_EL1_RESERVED 0x0      0
+PMSELR_EL0     0x0                 0
+DBGBVR2_EL1    0x0                 0
+DBGBCR2_EL1    0x0                 0
+PMCEID0_EL0    0x1                 1
+DBGWVR2_EL1    0x0                 0
+PMCEID1_EL0    0x10000018          268435480
+DBGWCR2_EL1    0x0                 0
+MECID_P0_EL2   0x0                 0
+PMCCNTR_EL0    0x0                 0
+PMOVSCLR_EL0   0x0                 0
+MECID_A0_EL2   0x0                 0
+TTBR0_EL1      0x0                 0
+MECID_P1_EL2   0x0                 0
+OSDTRTX_EL1    0x0                 0
+HFGRTR_EL2     0x0                 0
+MDCCSR_EL0     0x0                 0
+TTBR1_EL1      0x0                 0
+TCR_EL1        0x2000000005        137438953477
+ACTLR_EL3      0x0                 0
+HFGWTR_EL2     0x0                 0
+DBGBVR3_EL1    0x0                 0
+HFGITR_EL2     0x0                 0
+TCR2_EL1       0x0                 0
+MECID_A1_EL2   0x0                 0
+DBGBCR3_EL1    0x0                 0
+SCTLR2_EL3     0x0                 0
+TFSR_EL3       0x0                 0
+DBGWVR3_EL1    0x0                 0
+ZCR_EL2        0x0                 0
+PMUSERENR_EL0  0x0                 0
+MECIDR_EL2     0xf                 15
+DBGWCR3_EL1    0x0                 0
+VMECID_P_EL2   0x0                 0
+HCRX_EL2       0x0                 0
+VMECID_A_EL2   0x0                 0
+PMOVSSET_EL0   0x0                 0
+SP_EL1         0x0                 0
+MDRAR_EL1      0x0                 0
+SMPRIMAP_EL2   0x0                 0
+PMCCFILTR_EL0  0x0                 0
+DBGBVR4_EL1    0x0                 0
+SMCR_EL2       0x0                 0
+DBGBCR4_EL1    0x0                 0
+DBGCLAIMSET_EL1 0xff               255
+VDISR_EL2      0x0                 0
+SVCR           0x0                 0
+PMMIR_EL1      0x0                 0
+CONTEXTIDR_EL1 0x0                 0
+ZCR_EL3        0x0                 0
+DBGBVR5_EL1    0x0                 0
+MAIR_EL1       0x0                 0
+DBGBCR5_EL1    0x0                 0
+TPIDR_EL1      0x0                 0
+MAIR2_EL1      0x0                 0
+DBGCLAIMCLR_EL1 0x0                0
+AFSR0_EL1      0x0                 0
+PIRE0_EL1      0x0                 0
+OSLSR_EL1      0xa                 10
+AFSR1_EL1      0x0                 0
+PIR_EL1        0x0                 0
+PAR_EL1        0x0                 0
+MIDR_EL1       0xf0510             984336
+SMCR_EL3       0x0                 0
+SCXTNUM_EL1    0x0                 0
+CBAR_EL1       0x0                 0
+OSECCR_EL1     0x0                 0
+DBGDTR_EL0     0x0                 0
+SPSR_IRQ       0x0                 0
+MDCR_EL3       0x0                 0
+SPSR_ABT       0x0                 0
+AMAIR_EL1      0x0                 0
+FPCR           0x0                 0
+SPSR_UND       0x0                 0
+MPIDR_EL1      0x80000000          2147483648
+FPSR           0x0                 0
+SPSR_FIQ       0x0                 0
+ESR_EL1        0x0                 0
+REVIDR_EL1     0x0                 0
+CLIDR          0x2000023           33554467
+MECID_RL_A_EL3 0x0                 0
+ID_PFR0        0x11020131          285344049
+ID_PFR1        0x10001             65537
+TCR2_EL2       0x0                 0
+ID_DFR0        0x600000a           100663306
+DBGDTRTX_EL0   0x0                 0
+GMID_EL1       0x6                 6
+AMAIR2_EL1     0x0                 0
+ID_AFR0        0x0                 0
+ID_MMFR0       0x10101105          269488389
+CSSELR         0x0                 0
+SMIDR_EL1      0x0                 0
+ID_MMFR1       0x40000000          1073741824
+AIDR           0x0                 0
+TPIDR_EL0      0x0                 0
+ID_MMFR2       0x1260000           19267584
+LOREA_EL1      0x0                 0
+TPIDRRO_EL0    0x0                 0
+LORN_EL1       0x0                 0
+ERRIDR_EL1     0x0                 0
+ID_MMFR3       0x2122211           34742801
+LORSA_EL1      0x0                 0
+OSDLR_EL1      0x0                 0
+IFSR32_EL2     0x0                 0
+LORC_EL1       0x0                 0
+ID_ISAR0       0x2101110           34607376
+MAIR2_EL2      0x0                 0
+TPIDR2_EL0     0x0                 0
+ID_ISAR1       0x13112111          319889681
+VNCR_EL2       0x0                 0
+PMEVCNTR0_EL0  0x0                 0
+ID_ISAR2       0x21232042          555950146
+GCSCR_EL1      0x0                 0
+CONTEXTIDR_EL2 0x0                 0
+SCXTNUM_EL0    0x0                 0
+ID_ISAR3       0x1112131           17899825
+CTR_EL0        0x80038003          2147713027
+LORID_EL1      0x0                 0
+PMEVCNTR2_EL0  0x0                 0
+ID_ISAR4       0x11142             69954
+GCSCRE0_EL1    0x400               1024
+PMEVCNTR3_EL0  0x0                 0
+ID_ISAR5       0x11011121          285282593
+GCSPR_EL1      0x0                 0
+PMEVCNTR1_EL0  0x0                 0
+PMEVCNTR4_EL0  0x0                 0
+ID_MMFR4       0x20021110          537006352
+PIRE0_EL2      0x0                 0
+PMEVCNTR5_EL0  0x0                 0
+ID_ISAR6       0x1111111           17895697
+PIR_EL2        0x0                 0
+MVFR0_EL1      0x10110222          269550114
+SCXTNUM_EL2    0x0                 0
+MVFR1_EL1      0x13211111          320934161
+FAR_EL1        0x0                 0
+S2PIR_EL2      0x0                 0
+MAIR2_EL3      0x0                 0
+MVFR2_EL1      0x43                67
+RES_0_C0_C3_3  0x0                 0
+ID_PFR2        0x11                17
+ID_DFR1        0x10                16
+AMAIR2_EL2     0x0                 0
+[?2004h(gdb) [7mx/8gx $sp[27m[C[C[C[C[C[Cx/8gx $sp
+[?2004l[34;49;22;23;24;27m0x775ebb5fde60[m:	0x0000000000000001	0x0000775ebb5fe18f
+[34;49;22;23;24;27m0x775ebb5fde70[m:	0x0000000000000000	0x0000775ebb5fe19b
+[34;49;22;23;24;27m0x775ebb5fde80[m:	0x0000775ebb5fe1ab	0x0000775ebb5fe1be
+[34;49;22;23;24;27m0x775ebb5fde90[m:	0x0000775ebb5fe1d2	0x0000775ebb5fe1ff
+[?2004h(gdb) [7mx/6i $pc[27m[C[C[C[C[C[Cx/6i $pc
+[?2004l=> [34;49;22;23;24;27m0x40021c[m <[33;49;22;23;24;27mcomparar_cadenas[m>:	[32;49;22;23;24;27mstp[m	[31;49;22;23;24;27mx29[m, [31;49;22;23;24;27mx30[m, [[31;49;22;23;24;27msp[m, [34;49;22;23;24;27m#-16[m]!
+   [34;49;22;23;24;27m0x400220[m <[33;49;22;23;24;27mcomparar_cadenas[m+4>:	[32;49;22;23;24;27mmov[m	[31;49;22;23;24;27mx29[m, [31;49;22;23;24;27msp[m
+   [34;49;22;23;24;27m0x400224[m <[33;49;22;23;24;27mcomparar_loop[m>:	[32;49;22;23;24;27mldrb[m	[31;49;22;23;24;27mw9[m, [[31;49;22;23;24;27mx0[m], [34;49;22;23;24;27m#1[m
+   [34;49;22;23;24;27m0x400228[m <[33;49;22;23;24;27mcomparar_loop[m+4>:	[32;49;22;23;24;27mldrb[m	[31;49;22;23;24;27mw10[m, [[31;49;22;23;24;27mx1[m], [34;49;22;23;24;27m#1[m
+   [34;49;22;23;24;27m0x40022c[m <[33;49;22;23;24;27mcomparar_loop[m+8>:	[32;49;22;23;24;27mcmp[m	[31;49;22;23;24;27mw9[m, [31;49;22;23;24;27mw10[m
+   [34;49;22;23;24;27m0x400230[m <[33;49;22;23;24;27mcomparar_loop[m+12>:	[32;49;22;23;24;27mb.ne[m	[34;49;22;23;24;27m0x40023c[m <[33;49;22;23;24;27mcadenas_diferentes[m>[37;49;2;23;24;27m  // b.any[m
+[?2004h(gdb) [7mcontinue[27m[C[C[C[C[C[Ccontinue
+[?2004lContinuando.
+
+Breakpoint 1, [33;49;22;23;24;27mcomparar_cadenas[m () at [32;49;22;23;24;27msrc/main.s[m:[39;49;2;23;24;27m196[m
+[39;49;2;23;24;27m196[m	    stp x[35;49;22;23;24;27m29[m[31;49;22;23;24;27m,[m x[35;49;22;23;24;27m30[m[31;49;22;23;24;27m,[m [31;49;22;23;24;27m[[m[32;49;22;23;24;27msp[m[31;49;22;23;24;27m,[m #[31;49;22;23;24;27m-[m[35;49;22;23;24;27m16[m[31;49;22;23;24;27m]![m
+[?2004h[?2004l[?2004h(gdb) continue
+[?2004lContinuando.
+
+Breakpoint 1, [33;49;22;23;24;27mcomparar_cadenas[m () at [32;49;22;23;24;27msrc/main.s[m:[39;49;2;23;24;27m196[m
+[39;49;2;23;24;27m196[m	    stp x[35;49;22;23;24;27m29[m[31;49;22;23;24;27m,[m x[35;49;22;23;24;27m30[m[31;49;22;23;24;27m,[m [31;49;22;23;24;27m[[m[32;49;22;23;24;27msp[m[31;49;22;23;24;27m,[m #[31;49;22;23;24;27m-[m[35;49;22;23;24;27m16[m[31;49;22;23;24;27m]![m
+[?2004h[?2004l[?2004h(gdb) continue
+[?2004lContinuando.
+
+Breakpoint 1, [33;49;22;23;24;27mcomparar_cadenas[m () at [32;49;22;23;24;27msrc/main.s[m:[39;49;2;23;24;27m196[m
+[39;49;2;23;24;27m196[m	    stp x[35;49;22;23;24;27m29[m[31;49;22;23;24;27m,[m x[35;49;22;23;24;27m30[m[31;49;22;23;24;27m,[m [31;49;22;23;24;27m[[m[32;49;22;23;24;27msp[m[31;49;22;23;24;27m,[m #[31;49;22;23;24;27m-[m[35;49;22;23;24;27m16[m[31;49;22;23;24;27m]![m
+[?2004h[?2004l[?2004h(gdb) continue
+[?2004lContinuando.
+
+Breakpoint 2, [33;49;22;23;24;27mcomando_echo[m () at [32;49;22;23;24;27msrc/main.s[m:[39;49;2;23;24;27m262[m
+[39;49;2;23;24;27m262[m	    stp x[35;49;22;23;24;27m29[m[31;49;22;23;24;27m,[m x[35;49;22;23;24;27m30[m[31;49;22;23;24;27m,[m [31;49;22;23;24;27m[[m[32;49;22;23;24;27msp[m[31;49;22;23;24;27m,[m #[31;49;22;23;24;27m-[m[35;49;22;23;24;27m16[m[31;49;22;23;24;27m]![m
+[?2004h[?2004l[?2004h(gdb) [7minfo registers[27m[C[C[C[C[C[Cinfo registers
+[?2004lx0             0x0                 0
+x1             0x41056c            4261228
+x2             0x9                 9
+x3             0x61                97
+x4             0x0                 0
+x5             0x0                 0
+x6             0x0                 0
+x7             0x0                 0
+x8             0x3f                63
+x9             0x0                 0
+x10            0x0                 0
+x11            0x0                 0
+x12            0x0                 0
+x13            0x0                 0
+x14            0x0                 0
+x15            0x0                 0
+x16            0x0                 0
+x17            0x0                 0
+x18            0x0                 0
+x19            0x9                 9
+x20            0x9                 9
+x21            0x410571            4261233
+x22            0x0                 0
+x23            0x0                 0
+x24            0x2                 2
+x25            0x410671            4261489
+x26            0x0                 0
+x27            0x0                 0
+x28            0x0                 0
+x29            0x0                 0
+x30            0x400218            4194840
+sp             0x775ebb5fde60      0x775ebb5fde60
+pc             0x400298            0x400298 <comando_echo>
+cpsr           0x60000000          [ EL=0 BTYPE=0 C Z ]
+fpsr           0x0                 0
+fpcr           0x0                 0
+vg             0x8                 8
+svg            0x0                 0
+svcr           0x0                 0
+tpidr          0x0                 0x0
+tpidr2         0x0                 0x0
+tag_ctl        0x0                 0
+ID_MMFR5       0x2                 2
+RES_0_C0_C3_7  0x0                 0
+ID_AA64PFR0_EL1 0x1000100110011    281479272792081
+DBGVCR32_EL2   0x0                 0
+MAIR_EL3       0x0                 0
+ID_AA64PFR1_EL1 0x2000321          33555233
+VSESR_EL2      0x0                 0
+ID_AA64PFR2_EL1 0x0                0
+ID_AA64PFR3_EL1_RESERVED 0x0       0
+SCTLR_EL1      0x9000040accd5e838  -8070446087815174088
+PIR_EL3        0x0                 0
+ID_AA64ZFR0_EL1 0x110110101210022  76579889676877858
+ACTLR_EL1      0x0                 0
+SCXTNUM_EL3    0x0                 0
+GCSPR_EL0      0x0                 0
+DACR32_EL2     0x0                 0
+ID_AA64SMFR0_EL1 0x82f15cff00000000 -9011319129105235968
+CPACR_EL1      0x3330000           53673984
+ID_AA64PFR6_EL1_RESERVED 0x0       0
+SCTLR2_EL1     0x0                 0
+FPEXC32_EL2    0x40000000          1073741824
+TFSR_EL1       0x0                 0
+ID_AA64PFR7_EL1_RESERVED 0x0       0
+TFSRE0_EL1     0x0                 0
+ID_AA64DFR0_EL1 0x6                6
+RGSR_EL1       0x0                 0
+ID_AA64DFR1_EL1 0x0                0
+GCR_EL1        0x1ffff             131071
+AMAIR2_EL3     0x0                 0
+ID_AA64DFR2_EL1_RESERVED 0x0       0
+GCSCR_EL2      0x0                 0
+GCSPR_EL2      0x0                 0
+ID_AA64DFR3_EL1_RESERVED 0x0       0
+ID_AA64AFR0_EL1 0x0                0
+ID_AA64AFR1_EL1 0x0                0
+ID_AA64AFR2_EL1_RESERVED 0x0       0
+CNTFRQ_EL0     0x3b9aca00          1000000000
+OSDTRRX_EL1    0x0                 0
+ID_AA64AFR3_EL1_RESERVED 0x0       0
+SPSR_EL1       0x0                 0
+ID_AA64ISAR0_EL1 0x1021111110312120 1162228943822070048
+DBGBVR0_EL1    0x0                 0
+ELR_EL1        0x0                 0
+ID_AA64ISAR1_EL1 0x11201100211002  4820331992780802
+HDFGRTR_EL2    0x0                 0
+HDFGWTR_EL2    0x0                 0
+DBGBCR0_EL1    0x0                 0
+PMEVTYPER0_EL0 0x0                 0
+ID_AA64ISAR2_EL1 0x10000000110012  4503599628484626
+DBGWVR0_EL1    0x0                 0
+VBAR_EL1       0x0                 0
+ID_AA64ISAR3_EL1_RESERVED 0x0      0
+ZCR_EL1        0x3                 3
+DBGWCR0_EL1    0x0                 0
+RVBAR_EL1      0x0                 0
+ID_AA64ISAR4_EL1_RESERVED 0x0      0
+PMEVTYPER2_EL0 0x0                 0
+RMR_EL1        0x1                 1
+ID_AA64ISAR5_EL1_RESERVED 0x0      0
+PMEVTYPER1_EL0 0x0                 0
+ID_AA64ISAR6_EL1_RESERVED 0x0      0
+GCSCR_EL3      0x0                 0
+PMEVTYPER4_EL0 0x0                 0
+PMEVTYPER5_EL0 0x0                 0
+GCSPR_EL3      0x0                 0
+ID_AA64ISAR7_EL1_RESERVED 0x0      0
+SMPRI_EL1      0x0                 0
+SP_EL0         0x0                 0
+ID_AA64MMFR0_EL1 0x20000000ff000000 2305843013491884032
+PMEVTYPER3_EL0 0x0                 0
+DBGBVR1_EL1    0x0                 0
+ID_AA64MMFR1_EL1 0x100000000000    17592186044416
+SMCR_EL1       0x80000001          2147483649
+DBGBCR1_EL1    0x0                 0
+ID_AA64MMFR2_EL1 0x100000000       4294967296
+PMINTENSET_EL1 0x0                 0
+DBGWVR1_EL1    0x0                 0
+ID_AA64MMFR3_EL1 0x0               0
+PMCR_EL0       0x41013000          1090596864
+DBGWCR1_EL1    0x0                 0
+ID_AA64MMFR4_EL1_RESERVED 0x0      0
+PMCNTENSET_EL0 0x0                 0
+ACTLR_EL2      0x0                 0
+PMINTENCLR_EL1 0x0                 0
+MDCCINT_EL1    0x0                 0
+ID_AA64MMFR5_EL1_RESERVED 0x0      0
+PMCNTENCLR_EL0 0x0                 0
+DISR_EL1       0x0                 0
+ID_AA64MMFR6_EL1_RESERVED 0x0      0
+SCTLR2_EL2     0x0                 0
+TFSR_EL2       0x0                 0
+MDSCR_EL1      0x1000              4096
+ID_AA64MMFR7_EL1_RESERVED 0x0      0
+PMSELR_EL0     0x0                 0
+DBGBVR2_EL1    0x0                 0
+DBGBCR2_EL1    0x0                 0
+PMCEID0_EL0    0x1                 1
+DBGWVR2_EL1    0x0                 0
+PMCEID1_EL0    0x10000018          268435480
+DBGWCR2_EL1    0x0                 0
+MECID_P0_EL2   0x0                 0
+PMCCNTR_EL0    0x0                 0
+PMOVSCLR_EL0   0x0                 0
+MECID_A0_EL2   0x0                 0
+TTBR0_EL1      0x0                 0
+MECID_P1_EL2   0x0                 0
+OSDTRTX_EL1    0x0                 0
+HFGRTR_EL2     0x0                 0
+MDCCSR_EL0     0x0                 0
+TTBR1_EL1      0x0                 0
+TCR_EL1        0x2000000005        137438953477
+ACTLR_EL3      0x0                 0
+HFGWTR_EL2     0x0                 0
+DBGBVR3_EL1    0x0                 0
+HFGITR_EL2     0x0                 0
+TCR2_EL1       0x0                 0
+MECID_A1_EL2   0x0                 0
+DBGBCR3_EL1    0x0                 0
+SCTLR2_EL3     0x0                 0
+TFSR_EL3       0x0                 0
+DBGWVR3_EL1    0x0                 0
+ZCR_EL2        0x0                 0
+PMUSERENR_EL0  0x0                 0
+MECIDR_EL2     0xf                 15
+DBGWCR3_EL1    0x0                 0
+VMECID_P_EL2   0x0                 0
+HCRX_EL2       0x0                 0
+VMECID_A_EL2   0x0                 0
+PMOVSSET_EL0   0x0                 0
+SP_EL1         0x0                 0
+MDRAR_EL1      0x0                 0
+SMPRIMAP_EL2   0x0                 0
+PMCCFILTR_EL0  0x0                 0
+DBGBVR4_EL1    0x0                 0
+SMCR_EL2       0x0                 0
+DBGBCR4_EL1    0x0                 0
+DBGCLAIMSET_EL1 0xff               255
+VDISR_EL2      0x0                 0
+SVCR           0x0                 0
+PMMIR_EL1      0x0                 0
+CONTEXTIDR_EL1 0x0                 0
+ZCR_EL3        0x0                 0
+DBGBVR5_EL1    0x0                 0
+MAIR_EL1       0x0                 0
+DBGBCR5_EL1    0x0                 0
+TPIDR_EL1      0x0                 0
+MAIR2_EL1      0x0                 0
+DBGCLAIMCLR_EL1 0x0                0
+AFSR0_EL1      0x0                 0
+PIRE0_EL1      0x0                 0
+OSLSR_EL1      0xa                 10
+AFSR1_EL1      0x0                 0
+PIR_EL1        0x0                 0
+PAR_EL1        0x0                 0
+MIDR_EL1       0xf0510             984336
+SMCR_EL3       0x0                 0
+SCXTNUM_EL1    0x0                 0
+CBAR_EL1       0x0                 0
+OSECCR_EL1     0x0                 0
+DBGDTR_EL0     0x0                 0
+SPSR_IRQ       0x0                 0
+MDCR_EL3       0x0                 0
+SPSR_ABT       0x0                 0
+AMAIR_EL1      0x0                 0
+FPCR           0x0                 0
+SPSR_UND       0x0                 0
+MPIDR_EL1      0x80000000          2147483648
+FPSR           0x0                 0
+SPSR_FIQ       0x0                 0
+ESR_EL1        0x0                 0
+REVIDR_EL1     0x0                 0
+CLIDR          0x2000023           33554467
+MECID_RL_A_EL3 0x0                 0
+ID_PFR0        0x11020131          285344049
+ID_PFR1        0x10001             65537
+TCR2_EL2       0x0                 0
+ID_DFR0        0x600000a           100663306
+DBGDTRTX_EL0   0x0                 0
+GMID_EL1       0x6                 6
+AMAIR2_EL1     0x0                 0
+ID_AFR0        0x0                 0
+ID_MMFR0       0x10101105          269488389
+CSSELR         0x0                 0
+SMIDR_EL1      0x0                 0
+ID_MMFR1       0x40000000          1073741824
+AIDR           0x0                 0
+TPIDR_EL0      0x0                 0
+ID_MMFR2       0x1260000           19267584
+LOREA_EL1      0x0                 0
+TPIDRRO_EL0    0x0                 0
+LORN_EL1       0x0                 0
+ERRIDR_EL1     0x0                 0
+ID_MMFR3       0x2122211           34742801
+LORSA_EL1      0x0                 0
+OSDLR_EL1      0x0                 0
+IFSR32_EL2     0x0                 0
+LORC_EL1       0x0                 0
+ID_ISAR0       0x2101110           34607376
+MAIR2_EL2      0x0                 0
+TPIDR2_EL0     0x0                 0
+ID_ISAR1       0x13112111          319889681
+VNCR_EL2       0x0                 0
+PMEVCNTR0_EL0  0x0                 0
+ID_ISAR2       0x21232042          555950146
+GCSCR_EL1      0x0                 0
+CONTEXTIDR_EL2 0x0                 0
+SCXTNUM_EL0    0x0                 0
+ID_ISAR3       0x1112131           17899825
+CTR_EL0        0x80038003          2147713027
+LORID_EL1      0x0                 0
+PMEVCNTR2_EL0  0x0                 0
+ID_ISAR4       0x11142             69954
+GCSCRE0_EL1    0x400               1024
+PMEVCNTR3_EL0  0x0                 0
+ID_ISAR5       0x11011121          285282593
+GCSPR_EL1      0x0                 0
+PMEVCNTR1_EL0  0x0                 0
+PMEVCNTR4_EL0  0x0                 0
+ID_MMFR4       0x20021110          537006352
+PIRE0_EL2      0x0                 0
+PMEVCNTR5_EL0  0x0                 0
+ID_ISAR6       0x1111111           17895697
+PIR_EL2        0x0                 0
+MVFR0_EL1      0x10110222          269550114
+SCXTNUM_EL2    0x0                 0
+MVFR1_EL1      0x13211111          320934161
+FAR_EL1        0x0                 0
+S2PIR_EL2      0x0                 0
+MAIR2_EL3      0x0                 0
+MVFR2_EL1      0x43                67
+RES_0_C0_C3_3  0x0                 0
+ID_PFR2        0x11                17
+ID_DFR1        0x10                16
+AMAIR2_EL2     0x0                 0
+[?2004h(gdb) [7mx/8gx $sp[27m[C[C[C[C[C[Cx/8gx $sp
+[?2004l[34;49;22;23;24;27m0x775ebb5fde60[m:	0x0000000000000001	0x0000775ebb5fe18f
+[34;49;22;23;24;27m0x775ebb5fde70[m:	0x0000000000000000	0x0000775ebb5fe19b
+[34;49;22;23;24;27m0x775ebb5fde80[m:	0x0000775ebb5fe1ab	0x0000775ebb5fe1be
+[34;49;22;23;24;27m0x775ebb5fde90[m:	0x0000775ebb5fe1d2	0x0000775ebb5fe1ff
+[?2004h(gdb) [7mx/6i $pc[27m[C[C[C[C[C[Cx/6i $pc
+[?2004l=> [34;49;22;23;24;27m0x400298[m <[33;49;22;23;24;27mcomando_echo[m>:	[32;49;22;23;24;27mstp[m	[31;49;22;23;24;27mx29[m, [31;49;22;23;24;27mx30[m, [[31;49;22;23;24;27msp[m, [34;49;22;23;24;27m#-16[m]!
+   [34;49;22;23;24;27m0x40029c[m <[33;49;22;23;24;27mcomando_echo[m+4>:	[32;49;22;23;24;27mmov[m	[31;49;22;23;24;27mx29[m, [31;49;22;23;24;27msp[m
+   [34;49;22;23;24;27m0x4002a0[m <[33;49;22;23;24;27mcomando_echo[m+8>:	[32;49;22;23;24;27mmov[m	[31;49;22;23;24;27mx9[m, [34;49;22;23;24;27m#0x1                   [m[37;49;2;23;24;27m	// #1[m
+   [34;49;22;23;24;27m0x4002a4[m <[33;49;22;23;24;27mcomando_echo[m+12>:	[32;49;22;23;24;27mldr[m	[31;49;22;23;24;27mx25[m, [34;49;22;23;24;27m0x4003f0[m <[33;49;22;23;24;27mterminar[m+32>
+   [34;49;22;23;24;27m0x4002a8[m <[33;49;22;23;24;27mecho_loop[m>:	[32;49;22;23;24;27mcmp[m	[31;49;22;23;24;27mx9[m, [31;49;22;23;24;27mx24[m
+   [34;49;22;23;24;27m0x4002ac[m <[33;49;22;23;24;27mecho_loop[m+4>:	[32;49;22;23;24;27mb.ge[m	[34;49;22;23;24;27m0x400300[m <[33;49;22;23;24;27mecho_finalizar[m>[37;49;2;23;24;27m  // b.tcont[m
+[?2004h(gdb) [7minfo breakpoints[27m[C[C[C[C[C[Cinfo breakpoints
+[?2004l[39;49;1;23;24;27mNum[m     [39;49;1;23;24;27mType[m           [39;49;1;23;24;27mDisp[m [39;49;1;23;24;27mEnb[m [39;49;1;23;24;27mAddress[m            [39;49;1;23;24;27mWhat[m
+1       breakpoint     keep y   [34;49;22;23;24;27m0x000000000040021c[m [32;49;22;23;24;27msrc/main.s[m:[39;49;2;23;24;27m196[m
+	breakpoint already hit 4 times
+2       breakpoint     keep y   [34;49;22;23;24;27m0x0000000000400298[m [32;49;22;23;24;27msrc/main.s[m:[39;49;2;23;24;27m262[m
+	breakpoint already hit 1 time
+3       breakpoint     keep y   [34;49;22;23;24;27m0x000000000040031c[m [32;49;22;23;24;27msrc/main.s[m:[39;49;2;23;24;27m319[m
+[?2004h(gdb) [7mdisable 1[27m[C[C[C[C[C[Cdisable 1
+[?2004l[?2004h(gdb) [7mdisable 1[27m[C[C[C[C[C[Cdisable 1[1P1 1[C[K2
+[?2004l[?2004h(gdb) continue
+[?2004lContinuando.
+
+Breakpoint 3, [33;49;22;23;24;27mejecutar_externo[m () at [32;49;22;23;24;27msrc/main.s[m:[39;49;2;23;24;27m319[m
+[39;49;2;23;24;27m319[m	    stp x[35;49;22;23;24;27m29[m[31;49;22;23;24;27m,[m x[35;49;22;23;24;27m30[m[31;49;22;23;24;27m,[m [31;49;22;23;24;27m[[m[32;49;22;23;24;27msp[m[31;49;22;23;24;27m,[m #[31;49;22;23;24;27m-[m[35;49;22;23;24;27m48[m[31;49;22;23;24;27m]![m
+[?2004h[?2004l[?2004h(gdb) [7minfo registers[27m[C[C[C[C[C[Cinfo registers
+[?2004lx0             0x1                 1
+x1             0x410568            4261224
+x2             0x10                16
+x3             0x61                97
+x4             0x0                 0
+x5             0x0                 0
+x6             0x0                 0
+x7             0x0                 0
+x8             0x3f                63
+x9             0x2f                47
+x10            0x65                101
+x11            0x4                 4
+x12            0x0                 0
+x13            0x0                 0
+x14            0x0                 0
+x15            0x0                 0
+x16            0x0                 0
+x17            0x0                 0
+x18            0x0                 0
+x19            0x10                16
+x20            0x10                16
+x21            0x410571            4261233
+x22            0x0                 0
+x23            0x0                 0
+x24            0x2                 2
+x25            0x410671            4261489
+x26            0x0                 0
+x27            0x0                 0
+x28            0x0                 0
+x29            0x0                 0
+x30            0x400200            4194816
+sp             0x775ebb5fde60      0x775ebb5fde60
+pc             0x40031c            0x40031c <ejecutar_externo>
+cpsr           0x20000000          [ EL=0 BTYPE=0 C ]
+fpsr           0x0                 0
+fpcr           0x0                 0
+vg             0x8                 8
+svg            0x0                 0
+svcr           0x0                 0
+tpidr          0x0                 0x0
+tpidr2         0x0                 0x0
+tag_ctl        0x0                 0
+ID_MMFR5       0x2                 2
+RES_0_C0_C3_7  0x0                 0
+ID_AA64PFR0_EL1 0x1000100110011    281479272792081
+DBGVCR32_EL2   0x0                 0
+MAIR_EL3       0x0                 0
+ID_AA64PFR1_EL1 0x2000321          33555233
+VSESR_EL2      0x0                 0
+ID_AA64PFR2_EL1 0x0                0
+ID_AA64PFR3_EL1_RESERVED 0x0       0
+SCTLR_EL1      0x9000040accd5e838  -8070446087815174088
+PIR_EL3        0x0                 0
+ID_AA64ZFR0_EL1 0x110110101210022  76579889676877858
+ACTLR_EL1      0x0                 0
+SCXTNUM_EL3    0x0                 0
+GCSPR_EL0      0x0                 0
+DACR32_EL2     0x0                 0
+ID_AA64SMFR0_EL1 0x82f15cff00000000 -9011319129105235968
+CPACR_EL1      0x3330000           53673984
+ID_AA64PFR6_EL1_RESERVED 0x0       0
+SCTLR2_EL1     0x0                 0
+FPEXC32_EL2    0x40000000          1073741824
+TFSR_EL1       0x0                 0
+ID_AA64PFR7_EL1_RESERVED 0x0       0
+TFSRE0_EL1     0x0                 0
+ID_AA64DFR0_EL1 0x6                6
+RGSR_EL1       0x0                 0
+ID_AA64DFR1_EL1 0x0                0
+GCR_EL1        0x1ffff             131071
+AMAIR2_EL3     0x0                 0
+ID_AA64DFR2_EL1_RESERVED 0x0       0
+GCSCR_EL2      0x0                 0
+GCSPR_EL2      0x0                 0
+ID_AA64DFR3_EL1_RESERVED 0x0       0
+ID_AA64AFR0_EL1 0x0                0
+ID_AA64AFR1_EL1 0x0                0
+ID_AA64AFR2_EL1_RESERVED 0x0       0
+CNTFRQ_EL0     0x3b9aca00          1000000000
+OSDTRRX_EL1    0x0                 0
+ID_AA64AFR3_EL1_RESERVED 0x0       0
+SPSR_EL1       0x0                 0
+ID_AA64ISAR0_EL1 0x1021111110312120 1162228943822070048
+DBGBVR0_EL1    0x0                 0
+ELR_EL1        0x0                 0
+ID_AA64ISAR1_EL1 0x11201100211002  4820331992780802
+HDFGRTR_EL2    0x0                 0
+HDFGWTR_EL2    0x0                 0
+DBGBCR0_EL1    0x0                 0
+PMEVTYPER0_EL0 0x0                 0
+ID_AA64ISAR2_EL1 0x10000000110012  4503599628484626
+DBGWVR0_EL1    0x0                 0
+VBAR_EL1       0x0                 0
+ID_AA64ISAR3_EL1_RESERVED 0x0      0
+ZCR_EL1        0x3                 3
+DBGWCR0_EL1    0x0                 0
+RVBAR_EL1      0x0                 0
+ID_AA64ISAR4_EL1_RESERVED 0x0      0
+PMEVTYPER2_EL0 0x0                 0
+RMR_EL1        0x1                 1
+ID_AA64ISAR5_EL1_RESERVED 0x0      0
+PMEVTYPER1_EL0 0x0                 0
+ID_AA64ISAR6_EL1_RESERVED 0x0      0
+GCSCR_EL3      0x0                 0
+PMEVTYPER4_EL0 0x0                 0
+PMEVTYPER5_EL0 0x0                 0
+GCSPR_EL3      0x0                 0
+ID_AA64ISAR7_EL1_RESERVED 0x0      0
+SMPRI_EL1      0x0                 0
+SP_EL0         0x0                 0
+ID_AA64MMFR0_EL1 0x20000000ff000000 2305843013491884032
+PMEVTYPER3_EL0 0x0                 0
+DBGBVR1_EL1    0x0                 0
+ID_AA64MMFR1_EL1 0x100000000000    17592186044416
+SMCR_EL1       0x80000001          2147483649
+DBGBCR1_EL1    0x0                 0
+ID_AA64MMFR2_EL1 0x100000000       4294967296
+PMINTENSET_EL1 0x0                 0
+DBGWVR1_EL1    0x0                 0
+ID_AA64MMFR3_EL1 0x0               0
+PMCR_EL0       0x41013000          1090596864
+DBGWCR1_EL1    0x0                 0
+ID_AA64MMFR4_EL1_RESERVED 0x0      0
+PMCNTENSET_EL0 0x0                 0
+ACTLR_EL2      0x0                 0
+PMINTENCLR_EL1 0x0                 0
+MDCCINT_EL1    0x0                 0
+ID_AA64MMFR5_EL1_RESERVED 0x0      0
+PMCNTENCLR_EL0 0x0                 0
+DISR_EL1       0x0                 0
+ID_AA64MMFR6_EL1_RESERVED 0x0      0
+SCTLR2_EL2     0x0                 0
+TFSR_EL2       0x0                 0
+MDSCR_EL1      0x1000              4096
+ID_AA64MMFR7_EL1_RESERVED 0x0      0
+PMSELR_EL0     0x0                 0
+DBGBVR2_EL1    0x0                 0
+DBGBCR2_EL1    0x0                 0
+PMCEID0_EL0    0x1                 1
+DBGWVR2_EL1    0x0                 0
+PMCEID1_EL0    0x10000018          268435480
+DBGWCR2_EL1    0x0                 0
+MECID_P0_EL2   0x0                 0
+PMCCNTR_EL0    0x0                 0
+PMOVSCLR_EL0   0x0                 0
+MECID_A0_EL2   0x0                 0
+TTBR0_EL1      0x0                 0
+MECID_P1_EL2   0x0                 0
+OSDTRTX_EL1    0x0                 0
+HFGRTR_EL2     0x0                 0
+MDCCSR_EL0     0x0                 0
+TTBR1_EL1      0x0                 0
+TCR_EL1        0x2000000005        137438953477
+ACTLR_EL3      0x0                 0
+HFGWTR_EL2     0x0                 0
+DBGBVR3_EL1    0x0                 0
+HFGITR_EL2     0x0                 0
+TCR2_EL1       0x0                 0
+MECID_A1_EL2   0x0                 0
+DBGBCR3_EL1    0x0                 0
+SCTLR2_EL3     0x0                 0
+TFSR_EL3       0x0                 0
+DBGWVR3_EL1    0x0                 0
+ZCR_EL2        0x0                 0
+PMUSERENR_EL0  0x0                 0
+MECIDR_EL2     0xf                 15
+DBGWCR3_EL1    0x0                 0
+VMECID_P_EL2   0x0                 0
+HCRX_EL2       0x0                 0
+VMECID_A_EL2   0x0                 0
+PMOVSSET_EL0   0x0                 0
+SP_EL1         0x0                 0
+MDRAR_EL1      0x0                 0
+SMPRIMAP_EL2   0x0                 0
+PMCCFILTR_EL0  0x0                 0
+DBGBVR4_EL1    0x0                 0
+SMCR_EL2       0x0                 0
+DBGBCR4_EL1    0x0                 0
+DBGCLAIMSET_EL1 0xff               255
+VDISR_EL2      0x0                 0
+SVCR           0x0                 0
+PMMIR_EL1      0x0                 0
+CONTEXTIDR_EL1 0x0                 0
+ZCR_EL3        0x0                 0
+DBGBVR5_EL1    0x0                 0
+MAIR_EL1       0x0                 0
+DBGBCR5_EL1    0x0                 0
+TPIDR_EL1      0x0                 0
+MAIR2_EL1      0x0                 0
+DBGCLAIMCLR_EL1 0x0                0
+AFSR0_EL1      0x0                 0
+PIRE0_EL1      0x0                 0
+OSLSR_EL1      0xa                 10
+AFSR1_EL1      0x0                 0
+PIR_EL1        0x0                 0
+PAR_EL1        0x0                 0
+MIDR_EL1       0xf0510             984336
+SMCR_EL3       0x0                 0
+SCXTNUM_EL1    0x0                 0
+CBAR_EL1       0x0                 0
+OSECCR_EL1     0x0                 0
+DBGDTR_EL0     0x0                 0
+SPSR_IRQ       0x0                 0
+MDCR_EL3       0x0                 0
+SPSR_ABT       0x0                 0
+AMAIR_EL1      0x0                 0
+FPCR           0x0                 0
+SPSR_UND       0x0                 0
+MPIDR_EL1      0x80000000          2147483648
+FPSR           0x0                 0
+SPSR_FIQ       0x0                 0
+ESR_EL1        0x0                 0
+REVIDR_EL1     0x0                 0
+CLIDR          0x2000023           33554467
+MECID_RL_A_EL3 0x0                 0
+ID_PFR0        0x11020131          285344049
+ID_PFR1        0x10001             65537
+TCR2_EL2       0x0                 0
+ID_DFR0        0x600000a           100663306
+DBGDTRTX_EL0   0x0                 0
+GMID_EL1       0x6                 6
+AMAIR2_EL1     0x0                 0
+ID_AFR0        0x0                 0
+ID_MMFR0       0x10101105          269488389
+CSSELR         0x0                 0
+SMIDR_EL1      0x0                 0
+ID_MMFR1       0x40000000          1073741824
+AIDR           0x0                 0
+TPIDR_EL0      0x0                 0
+ID_MMFR2       0x1260000           19267584
+LOREA_EL1      0x0                 0
+TPIDRRO_EL0    0x0                 0
+LORN_EL1       0x0                 0
+ERRIDR_EL1     0x0                 0
+ID_MMFR3       0x2122211           34742801
+LORSA_EL1      0x0                 0
+OSDLR_EL1      0x0                 0
+IFSR32_EL2     0x0                 0
+LORC_EL1       0x0                 0
+ID_ISAR0       0x2101110           34607376
+MAIR2_EL2      0x0                 0
+TPIDR2_EL0     0x0                 0
+ID_ISAR1       0x13112111          319889681
+VNCR_EL2       0x0                 0
+PMEVCNTR0_EL0  0x0                 0
+ID_ISAR2       0x21232042          555950146
+GCSCR_EL1      0x0                 0
+CONTEXTIDR_EL2 0x0                 0
+SCXTNUM_EL0    0x0                 0
+ID_ISAR3       0x1112131           17899825
+CTR_EL0        0x80038003          2147713027
+LORID_EL1      0x0                 0
+PMEVCNTR2_EL0  0x0                 0
+ID_ISAR4       0x11142             69954
+GCSCRE0_EL1    0x400               1024
+PMEVCNTR3_EL0  0x0                 0
+ID_ISAR5       0x11011121          285282593
+GCSPR_EL1      0x0                 0
+PMEVCNTR1_EL0  0x0                 0
+PMEVCNTR4_EL0  0x0                 0
+ID_MMFR4       0x20021110          537006352
+PIRE0_EL2      0x0                 0
+PMEVCNTR5_EL0  0x0                 0
+ID_ISAR6       0x1111111           17895697
+PIR_EL2        0x0                 0
+MVFR0_EL1      0x10110222          269550114
+SCXTNUM_EL2    0x0                 0
+MVFR1_EL1      0x13211111          320934161
+FAR_EL1        0x0                 0
+S2PIR_EL2      0x0                 0
+MAIR2_EL3      0x0                 0
+MVFR2_EL1      0x43                67
+RES_0_C0_C3_3  0x0                 0
+ID_PFR2        0x11                17
+ID_DFR1        0x10                16
+AMAIR2_EL2     0x0                 0
+[?2004h(gdb) [7mx/8gx $sp[27m[C[C[C[C[C[Cx/8gx $sp
+[?2004l[34;49;22;23;24;27m0x775ebb5fde60[m:	0x0000000000000001	0x0000775ebb5fe18f
+[34;49;22;23;24;27m0x775ebb5fde70[m:	0x0000000000000000	0x0000775ebb5fe19b
+[34;49;22;23;24;27m0x775ebb5fde80[m:	0x0000775ebb5fe1ab	0x0000775ebb5fe1be
+[34;49;22;23;24;27m0x775ebb5fde90[m:	0x0000775ebb5fe1d2	0x0000775ebb5fe1ff
+[?2004h(gdb) [7mx/6i $pc[27m[C[C[C[C[C[Cx/6i $pc
+[?2004l=> [34;49;22;23;24;27m0x40031c[m <[33;49;22;23;24;27mejecutar_externo[m>:	[32;49;22;23;24;27mstp[m	[31;49;22;23;24;27mx29[m, [31;49;22;23;24;27mx30[m, [[31;49;22;23;24;27msp[m, [34;49;22;23;24;27m#-48[m]!
+   [34;49;22;23;24;27m0x400320[m <[33;49;22;23;24;27mejecutar_externo[m+4>:	[32;49;22;23;24;27mstp[m	[31;49;22;23;24;27mx19[m, [31;49;22;23;24;27mx20[m, [[31;49;22;23;24;27msp[m, [34;49;22;23;24;27m#16[m]
+   [34;49;22;23;24;27m0x400324[m <[33;49;22;23;24;27mejecutar_externo[m+8>:	[32;49;22;23;24;27mstr[m	[31;49;22;23;24;27mx25[m, [[31;49;22;23;24;27msp[m, [34;49;22;23;24;27m#32[m]
+   [34;49;22;23;24;27m0x400328[m <[33;49;22;23;24;27mejecutar_externo[m+12>:	[32;49;22;23;24;27mmov[m	[31;49;22;23;24;27mx29[m, [31;49;22;23;24;27msp[m
+   [34;49;22;23;24;27m0x40032c[m <[33;49;22;23;24;27mejecutar_externo[m+16>:	[32;49;22;23;24;27mmov[m	[31;49;22;23;24;27mx0[m, [34;49;22;23;24;27m#0x11                  [m[37;49;2;23;24;27m	// #17[m
+   [34;49;22;23;24;27m0x400330[m <[33;49;22;23;24;27mejecutar_externo[m+20>:	[32;49;22;23;24;27mmov[m	[31;49;22;23;24;27mx1[m, [34;49;22;23;24;27m#0x0                   [m[37;49;2;23;24;27m	// #0[m
+[?2004h(gdb) [7mquit[27mquit
+[?2004l[?2004hUna sesión de depuración está activa.
+
+	Inferior 1 [process 20632] will be killed.
+
+¿Salir de cualquier modo? (y or n) y
+[?2004l]666;vte.shell.postexec=0\]7;file://salmonnn-HP-Laptop-15-ef2xxx/home/salmonnn/minishell_arm64\]0;salmonnn@salmonnn-HP-Laptop-15-ef2xxx:~/minishell_arm64\]666;vte.shell.precmd!\[?2004h]0;salmonnn@salmonnn-HP-Laptop-15-ef2xxx: ~/minishell_arm64[01;32msalmonnn@salmonnn-HP-Laptop-15-ef2xxx[00m:[01;34m~/minishell_arm64[00m$ [7mexit[27mexit
+[?2004l]133;C\]666;vte.shell.preexec!\exit
+
+Script terminado en 2026-10-20 22:54:41-06:00 [CÓDIGO_SALIDA_ORDEN="0"]
