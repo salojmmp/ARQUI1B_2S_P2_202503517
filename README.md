@@ -5,7 +5,7 @@
 MiniShell es un intérprete de comandos desarrollado en lenguaje ensamblador ARM64 puro mediante GNU Assembler (GAS). Permite leer comandos del usuario, procesar sus argumentos, ejecutar comandos internos y lanzar programas externos en Linux.
 
 El proyecto utiliza llamadas al sistema de Linux ARM64 para gestionar la entrada y salida, crear procesos y ejecutar programas.
-
+(video del proyecto https://youtu.be/dSX5dGWZi9k)
 ## 2. Requisitos
 
 - Ubuntu o Linux.
